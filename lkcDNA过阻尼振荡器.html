@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+
+<head>
+<title>lkcDNA过阻尼振荡器</title>
+<style>
+.abutton{
+  font-size:3vw;
+  color:#91bef0;
+  text-shadow:0.2vw 0.22vw violet;
+}
+#animate1 {
+  position: fixed;
+  top:0px;
+  left:0px;
+}
+#animate2 {
+  position: fixed;
+  bottom:0px;
+  left:0px;
+}
+#animate3 {
+  position: fixed;
+  top:0px;
+  right:0px;
+}
+#animate4 {
+  position: fixed;
+  bottom:0px;
+  right:0px;
+}
+ #bg{
+    position:fixed;
+    top:0px;
+    left:0px;
+    opacity:0.5;
+  }
+.zhong{
+  position:relative;
+  text-align:center;
+}
+
+</style>
+<script>
+
+</script>
+</head>
+
+<body>
+
+
+<img id="bg" src="secret/lkc5.jpg" />
+  <script>
+  {
+    document.getElementById("bg").width = screen.availWidth;
+    document.getElementById("bg").height = screen.availHeight;
+  }
+  </script>
+
+<div class="zhong">
+<img id="afraid" src="secret/case0.jpg" />
+<br /><br />
+<button type="button" class="abutton" onclick="ran()">害怕</button>
+</div>
+<script>{
+  function ran(){
+    graph=document.getElementById("afraid");
+    var rand=Math.floor(Math.random() * 3);
+    switch (rand)
+    {
+      case 0:graph.src="secret/case0.jpg";break;
+      case 1:graph.src="secret/case1.jpg";break;
+      case 2:graph.src="secret/case2.jpg";break;
+    }
+  }
+}
+</script>
+
+<div id ="animate1"><img src ="secret/lkc1.jpg" width="200px" height="300px"></div>
+<div id ="animate2"><img src ="secret/lkc2.jpg" width="300px" height="500px"></div>
+<div id ="animate3"><img src ="secret/lkc3.jpg" width="250px" height="400px"></div>
+<div id ="animate4"><img src ="secret/lkc4.jpg" width="300px" height="300px"></div>
+
+<script>
+{//lkc1
+  var elem = document.getElementById("animate1");   
+  var pos1 = 1,pos2 = 1,flag1=0,flag2=0;//pos1横坐标，pos2纵坐标，flag1真上，flag2真左
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos1 == 500) 
+    {
+      flag1=1;
+    } 
+    if (pos1 == 0) 
+    {
+      flag1=0;
+    } 
+    if (pos2 == 1336) 
+    {
+      flag2=1;
+    } 
+    if (pos2 == 0) 
+    {
+      flag2=0;
+    } 
+    if (flag1 == 0){ pos1++;}
+    if (flag1 == 1){ pos1--;}
+    if (flag2 == 0){ pos2++;}
+    if (flag2 == 1){ pos2--;}
+    elem.style.top = pos1 + "px"; 
+    elem.style.left = pos2 + "px"; 
+  }
+}
+{//lkc2
+  var elem2 = document.getElementById("animate2");   
+  var poss1 = 1,poss2 = 1,flagg1=0,flagg2=0;//pos1横坐标，pos2纵坐标，flag1真下，flag2真左
+  var id = setInterval(frame, 3);
+  function frame() {
+    if (poss1 == 300) 
+    {
+      flagg1=1;
+    } 
+    if (poss1 == 0) 
+    {
+      flagg1=0;
+    } 
+    if (poss2 == 1236) 
+    {
+      flagg2=1;
+    } 
+    if (poss2 == 0) 
+    {
+      flagg2=0;
+    } 
+    if (flagg1 == 0){ poss1++;}
+    if (flagg1 == 1){ poss1--;}
+    if (flagg2 == 0){ poss2++;}
+    if (flagg2 == 1){ poss2--;}
+    elem2.style.bottom = poss1 + "px"; 
+    elem2.style.left = poss2 + "px"; 
+  }
+}
+{//lkc3
+  var elem3 = document.getElementById("animate3");   
+  var pod1 = 1,pod2 = 1,flad1=0,flad2=0;//pos1横坐标，pos2纵坐标，flag1真上，flag2真左
+  var id = setInterval(frame, 2);
+  function frame() {
+    if (pod1 == 400) 
+    {
+      flad1=1;
+    } 
+    if (pod1 == 0) 
+    {
+      flad1=0;
+    } 
+    if (pod2 == 1286) 
+    {
+      flad2=1;
+    } 
+    if (pod2 == 0) 
+    {
+      flad2=0;
+    } 
+    if (flad1 == 0){ pod1++;}
+    if (flad1 == 1){ pod1--;}
+    if (flad2 == 0){ pod2++;}
+    if (flad2 == 1){ pod2--;}
+    elem3.style.top = pod1 + "px"; 
+    elem3.style.right = pod2 + "px"; 
+  }
+}
+{//lkc4
+  var elem4 = document.getElementById("animate4");   
+  var pos1 = 1,pos2 = 1,flag1=0,flag2=0;//pos1横坐标，pos2纵坐标，flag1真下，flag2真左
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos1 == 500) 
+    {
+      flag1=1;
+    } 
+    if (pos1 == 0) 
+    {
+      flag1=0;
+    } 
+    if (pos2 == 1336) 
+    {
+      flag2=1;
+    } 
+    if (pos2 == 0) 
+    {
+      flag2=0;
+    } 
+    if (flag1 == 0){ pos1++;}
+    if (flag1 == 1){ pos1--;}
+    if (flag2 == 0){ pos2++;}
+    if (flag2 == 1){ pos2--;}
+    elem4.style.bottom = pos1 + "px"; 
+    elem4.style.right = pos2 + "px"; 
+  }
+}
+</script>
+
+</body>
+
+</html>
